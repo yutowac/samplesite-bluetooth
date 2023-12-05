@@ -246,25 +246,13 @@ BlueJelly.prototype.reset= function() {
 //BlueJellyのインスタンス生成
 var ble = new BlueJelly();
 
-
-//-------------------------------------------------
-//ボタンが押された時のイベント登録
-//--------------------------------------------------
-// document.getElementById('readData').addEventListener('click', function() {
-//   ble.read('BatteryLevel');
-// });
-// document.getElementById('reset').addEventListener('click', function() {
-//   ble.reset(); //reset is disconnect & clear
-// });
-
-
 //--------------------------------------------------
 //ロード時の処理
 //--------------------------------------------------
 window.onload = function() {
   //初期の文字列表示
-  document.getElementById('device_name').innerHTML = "No Device";
-  document.getElementById('data_text').innerHTML = "No Data"
+  document.getElementById('device_name').innerHTML = "";
+  document.getElementById('data_text').innerHTML = "XXXX"
 
   //UUIDの設定
   ble.setUUID("BatteryLevel", "0000180f-0000-1000-8000-00805f9b34fb", "00002a19-0000-1000-8000-00805f9b34fb");
@@ -294,18 +282,22 @@ ble.onRead = function(data, uuid) {
   ble.read('BatteryLevel');
 }
 
-
 //--------------------------------------------------
 //Reset後の処理
 //--------------------------------------------------
 ble.onReset = function() {
   //HTMLに表示
-  document.getElementById('device_name').innerHTML = "No Device";
+  document.getElementById('device_name').innerHTML = "";
 }
 
 
 function clickBLE() {
   ble.read('BatteryLevel');
-  alert("気になる？");
+  console.log("クリックされました");
+}
+
+function clickTooth() {
+  ble.reset();
+  alert("Brush Your Teeth");
   console.log("クリックされました");
 }
