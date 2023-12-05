@@ -252,7 +252,7 @@ var ble = new BlueJelly();
 window.onload = function() {
   //初期の文字列表示
   document.getElementById('device_name').innerHTML = "";
-  document.getElementById('data_text').innerHTML = "XXXX"
+  document.getElementById('data_text').innerHTML = "";
 
   //UUIDの設定
   ble.setUUID("BatteryLevel", "0000180f-0000-1000-8000-00805f9b34fb", "00002a19-0000-1000-8000-00805f9b34fb");
