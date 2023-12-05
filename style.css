@@ -10,6 +10,11 @@ body, html {
   background-position: center;
 }
 
+#data_text {
+	
+  font-size: 30px;
+  color: #018ba7;
+}
 
 input{display:none}
 .on,.off{
