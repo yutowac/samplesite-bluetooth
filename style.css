@@ -12,7 +12,8 @@ body, html {
 
 #device_name {
   font-size: 30px;
-  color: #018ba7;
+  color: black;
+  font-weight: 500;
 }
 
 input{display:none}
