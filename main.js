@@ -2,6 +2,7 @@
 //     acceptAllAdvertisements: true,
 //     keepRepeatedDevices: true
 // };
+
 var BlueJelly = function(){
   this.bluetoothDevice = null;
   this.dataCharacteristic = null;
