@@ -16,7 +16,6 @@ var BlueJelly = function(){
   this.onError = function(error){console.log("onError");};
 }
 
-
 //--------------------------------------------------
 //setUUID
 //--------------------------------------------------
