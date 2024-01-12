@@ -26,7 +26,6 @@ BlueJelly.prototype.setUUID = function(name, serviceUUID, characteristicUUID){
   this.hashUUID[name] = {'serviceUUID':serviceUUID, 'characteristicUUID':characteristicUUID};
 }
 
-
 //--------------------------------------------------
 //scan
 //--------------------------------------------------
@@ -37,7 +36,6 @@ BlueJelly.prototype.scan = function(uuid){
     this.onError(error);
   });
 }
-
 
 //--------------------------------------------------
 //requestDevice
